@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from sklearn.neighbors import KNeighborsClassifier
 import matplotlib.pyplot as plot
 import numpy as np
-from sklearn import cross_validation  
+from sklearn.model_selection import train_test_split
 from sklearn import *  
 
 
@@ -29,7 +29,7 @@ plot.show()
 
 
 def PVV1(X,Y):#K = 1
-    X_train,X_test,Y_train,Y_test = cross_validation.train_test_split(X,Y) 
+    X_train,X_test,Y_train,Y_test = train_test_split(X,Y) 
     classifer = neighbors.KNeighborsClassifier(n_neighbors=1, metric='euclidean')
     classifer.fit(X_train,Y_train)
     prediction = classifer.predict(X_test)
@@ -38,7 +38,7 @@ def PVV1(X,Y):#K = 1
     print(erreur_prediction)
     
 def PVV3(X,Y):#K = 3
-    X_train,X_test,Y_train,Y_test = cross_validation.train_test_split(X,Y) 
+    X_train,X_test,Y_train,Y_test = train_test_split(X,Y) 
     classifer = neighbors.KNeighborsClassifier(n_neighbors=3, metric='euclidean')
     classifer.fit(X_train,Y_train)
     prediction = classifer.predict(X_test)
@@ -48,5 +48,5 @@ def PVV3(X,Y):#K = 3
     
 if __name__ == "__main__":
     # execute only if run as a script
-    PVV1(Xiris,Yiris)
-    PVV3(Xiris,Yiris)
+    PVV1(X_iris,Y_iris)
+    PVV3(X_iris,Y_iris)
