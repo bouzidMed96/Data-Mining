@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-Created on Tue Oct 22 14:23:26 2019
+Created on Tue Oct 29 16:39:31 2019
 
 @author: BouzidMed
 """
@@ -12,7 +12,7 @@ import sklearn.preprocessing as sk
 from sklearn.preprocessing import MinMaxScaler
 from sklearn import *  
 from sklearn.decomposition import PCA 
-#from sklearn.lda import LDA 
+from sklearn.lda import LDA 
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 
 
